@@ -1,0 +1,129 @@
+@import './reset.scss';
+@import './vars.scss';
+
+:root {
+  --primary: #009846;
+  --secondary: #EA5834;
+  --white: #ffffff;
+  --bej: #F3EFE4;
+  --dark: #363636
+}
+
+html {
+  line-height: 1.4;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--white);
+  font-size: 16px;
+}
+
+a {
+  transition: opacity 300ms;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h2,
+.h2 {
+  font-weight: 800;
+  font-size: 52px;
+  line-height: 63px;
+  text-transform: uppercase;
+  color: var(--dark);
+
+  @include screen($md) {
+    font-size: 42px;
+    line-height: 54px;
+  }
+
+  @include screen($xs) {
+    font-size: 28px;
+    line-height: 54px;
+  }
+}
+
+.wrapper {
+  max-width: 1280px;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin: 0 auto;
+
+  @include screen($lg) {
+    max-width: 1100px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @include screen($md) {
+    max-width: 960px;
+  }
+
+  @include screen($sm) {
+    max-width: 720px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  @include screen($xs) {
+    max-width: 640px;
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cols {
+  margin-left: -30px !important;
+}
+
+.col {
+  padding-left: 30px;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.grow {
+  flex-grow: 1;
+}
+
+.relative {
+  position: relative;
+}
+
+.round-btn {
+  display: inline-block;
+  padding: 20px 40px;
+  background: radial-gradient(109.33% 1246.37% at -2.33% 0%, #EA5834 0%, #EB512A 46.67%, #E2451E 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+  box-shadow: 0px 4px 16px rgba(234, 88, 52, 0.8);
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: white;
+
+  @include screen($sm) {
+    font-size: 14px;
+    padding: 10px 20px;
+    line-height: 17px;
+    border-radius: 10px;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
