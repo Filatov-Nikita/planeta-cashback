@@ -83,6 +83,12 @@
       height: 190px;
       left: -20px;
     }
+
+    @include screen(350px) {
+      width: 91px;
+      height: 108px;
+      left: -12px;
+    }
   }
 
   .rows {

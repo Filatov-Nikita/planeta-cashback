@@ -108,11 +108,25 @@ export default {
   }
 
   @include screen($xs) {
+    width: 370px;
+    height: 343px;
+    bottom: -90px;
+    right: -90px;
+  }
+
+  @include screen(530px) {
     width: 248px;
     height: 231px;
-    bottom: -58px;
+    bottom: -68px;
     right: auto;
-    left: 158px;
+    left: 47%;
+  }
+
+  @include screen(350px) {
+    left: 125px;
+    width: 218px;
+    height: 201px;
+    bottom: -50px;
   }
 }
 
@@ -138,7 +152,15 @@ export default {
   }
 
   @include screen($xs) {
+    max-width: 330px;
+  }
+
+  @include screen(530px) {
     max-width: 230px;
+  }
+
+  @include screen(350px) {
+    max-width: 180px;
   }
 }
 

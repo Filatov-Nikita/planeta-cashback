@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="row justify-between">
-      <a class="logo" href="https://ufa.planeta-mall.ru">
+      <a class="logo" :href="content.home">
         <img width="143" height="28" src="@/assets/images/logo.svg" alt="логотип «планеты»">
       </a>
       <button class="nav-btn" @click="toggle"></button>
@@ -24,6 +24,7 @@
 
 <script>
 export default {
+  inject: ['content'],
   data() {
     return {
       show: false,

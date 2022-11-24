@@ -3,7 +3,7 @@
     <div class="wrapper">
       <h2 class="text-center">Условия Участия</h2>
       <ul class="terms-list">
-        <li v-for="item, index in list">
+        <li v-for="item, index in content.terms">
           <span class="index">{{ index + 1 }}</span>
           <p v-html="item"></p>
         </li>
@@ -15,13 +15,14 @@
   </section>
 </template>
 <script>
+  import { inject } from 'vue';
+
   export default {
-    created() {
-      this.list = [
-        'Совершайте покупку с 10:00 <span>5 декабря</span> по 22:00 <span>25 декабря 2022 г.</span> на сумму от 5 000 рублей в одном чеке в ТРЦ «Планета»¹ или приобретайте подарочную карту ТРЦ «Планета» на сумму от 5 000 рублей на стойке информации или на сайте <a class="link-thin" href="https://ufa.planeta-mall.ru/gift-card" target="_blank">ufa.planeta-mall.ru/gift-card²</a>;',
-        'Регистрируйте чек³ в Личном кабинете <a href="https://id.mall.tech" target="_blank">id.mall.tech</a> и гарантированно получайте 500 рублей кэшбэк⁴;',
-        'Приз можно получить на стойке информации в период <span>с 5 по 30 декабря</span> в часы работы ТРЦ. Для получения приза требуется иметь при себе номер телефона, с которого производилась регистрация в акции.'
-      ]
+    setup() {
+      const content = inject('content');
+      return {
+        content
+      };
     }
   }
 </script>
@@ -43,7 +44,6 @@
 <style scoped lang="scss">
 .terms {
   background: var(--bej);
-  min-height: 500px;
   padding-top: 47px;
   padding-bottom: 120px;
   position: relative;
@@ -155,7 +155,7 @@
 
 .terms ul {
   list-style: none;
-  max-width: 975px;
+  max-width: 968px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 56px;

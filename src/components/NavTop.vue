@@ -1,7 +1,7 @@
 <template>
   <div class="row cols align-center">
     <div class="col logo">
-      <a href="https://ufa.planeta-mall.ru">
+      <a :href="content.home">
         <img width="143" height="37" src="@/assets/images/logo.svg" alt="Лого планеты">
       </a>
     </div>
@@ -20,8 +20,16 @@
   </div>
 </template>
 <script>
-  export default {
+  import { inject } from 'vue';
 
+  export default {
+    setup() {
+      const content = inject('content');
+
+      return {
+        content
+      }
+    }
   }
 </script>
 <style scoped>
