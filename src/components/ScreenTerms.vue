@@ -37,6 +37,11 @@
     font-weight: 700;
   }
 
+  .terms-list a:hover {
+    color: #000AFC;
+    text-decoration: underline;
+  }
+
   .terms-list .link-thin {
     font-weight: 400;
   }

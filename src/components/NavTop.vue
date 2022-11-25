@@ -7,10 +7,10 @@
     </div>
     <nav class="row align-center grow nav">
       <div class="col">
-        <a href="#terms">Условия участия</a>
+        <a class="nav-link" href="#terms">Условия участия</a>
       </div>
       <div class="col">
-        <a href="#info">Информация</a>
+        <a class="nav-link" href="#info">Информация</a>
       </div>
       <div class="grow"></div>
       <div class="col">
@@ -32,7 +32,7 @@
     }
   }
 </script>
-<style scoped>
+<style scoped lang="scss">
 .logo {
   flex-basis: 213px;
 }
@@ -41,21 +41,33 @@
   display: inline-block;
 }
 
-.nav a {
+nav {
+  .link-btn {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: var(--white);
+    color: black;
+    transition: all 200ms;
+
+    &:hover {
+      background: #D63108;
+      color: var(--white);
+    }
+  }
+}
+
+.nav-link {
   font-weight: 600;
   font-size: 18px;
   line-height: 22px;
   color: white;
-}
 
-nav .link-btn {
-  display: inline-block;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 22px;
-  padding: 10px 20px;
-  border-radius: 10px;
-  background: var(--white);
-  color: black;
+  &:hover {
+    text-decoration: underline;
+  }
 }
 </style>

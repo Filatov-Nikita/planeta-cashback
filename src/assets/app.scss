@@ -116,6 +116,10 @@ h2,
   line-height: 29px;
   color: white;
 
+  &:hover {
+    background: #D63108;
+  }
+
   @include screen($sm) {
     font-size: 14px;
     padding: 10px 20px;

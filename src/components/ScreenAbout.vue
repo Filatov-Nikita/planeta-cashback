@@ -155,6 +155,11 @@
     border: 4px dotted #C0A93C;
     border-radius: 10px;
     padding: 28px 4px;
+    transition: background 300ms;
+
+    &:hover {
+      background: #E6D4B2;
+    }
 
     @include screen($md) {
       padding: 18px 4px;

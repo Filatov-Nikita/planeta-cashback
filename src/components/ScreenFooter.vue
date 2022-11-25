@@ -39,6 +39,11 @@ export default {
     text-decoration: underline;
     color: var(--white);
   }
+
+  .texts p a:hover {
+    color: #000AFC;
+    text-decoration: underline;
+  }
 </style>
 <style scoped lang="scss">
 .footer {
@@ -98,6 +103,10 @@ export default {
     display: block;
     width: 32px;
     height: 32px;
+    transition: opacity 300ms;
+    &:hover {
+      opacity: 0.8;
+    }
   }
 
   &__ok {
