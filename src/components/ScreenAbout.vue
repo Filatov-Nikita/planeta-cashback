@@ -5,19 +5,25 @@
       <div class="rows">
         <ul class="row cols justify-between">
           <li class="col">
-            <a @click.prevent="rulesShowed = true" class="btn" href="#">Правила акции</a>
-            <Dialog v-model="rulesShowed">
+            <a class="btn" :href="content.info.rules" target="_blank">
+              Правила акции
+            </a>
+            <!-- <Dialog v-model="rulesShowed">
               <div>1</div>
-            </Dialog>
+            </Dialog> -->
           </li>
           <li class="col">
-            <a @click.prevent="qaShowed = true" class="btn" href="#">Ответы - вопросы</a>
-            <Dialog v-model="qaShowed">
+            <a class="btn" :href="content.info.qa" target="_blank">
+              Ответы - вопросы
+            </a>
+            <!-- <Dialog v-model="qaShowed">
               <div>2</div>
-            </Dialog>
+            </Dialog> -->
           </li>
           <li class="col">
-            <a class="btn btn--sm" href="#">Согласие на обработку персональных данных</a>
+            <a class="btn btn--sm" :href="content.info.policy" target="_blank">
+              Согласие на обработку персональных данных
+            </a>
           </li>
         </ul>
       </div>
@@ -25,17 +31,18 @@
   </section>
 </template>
 <script>
-  import Dialog from './Dialog.vue';
+  // import Dialog from './Dialog.vue';
+  import { inject } from 'vue';
 
   export default {
-    data() {
+    setup() {
+      const content = inject('content');
       return {
-        rulesShowed: false,
-        qaShowed: false,
+        content
       }
     },
     components: {
-      Dialog
+      // Dialog
     }
   }
 </script>

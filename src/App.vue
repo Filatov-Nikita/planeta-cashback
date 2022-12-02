@@ -23,6 +23,11 @@ export default {
             <p>Внешний вид призов, комплектация, цветовое изображение могут отличаться от указанного в настоящем рекламном макете и интернете. Количество призов ограничено. Возможно досрочное прекращение акции при выдаче всех акционных товаров.Подробная информация об организаторе Акции, о правилах и порядке ее проведения, количестве призов, сроках, месте и порядке их получения на сайте <a href="https://ufa.planeta-mall.ru" target="_blank">ufa.planeta-mall.ru</a></p>
           `,
         ],
+        info: {
+          rules: 'https://ufa.planeta-mall.ru/documents/102787/view',
+          qa: 'https://ufa.planeta-mall.ru/documents/102788/view',
+          policy: 'https://id.mall.tech/policy'
+        },
         social: {
           vk: 'https://vk.com/trc_planeta_ufa',
           tg: 'https://t.me/trc_planeta_ufa',
@@ -47,6 +52,11 @@ export default {
             <p>Внешний вид призов, комплектация, цветовое изображение могут отличаться от указанного в настоящем рекламном макете и интернете. Количество призов ограничено. Возможно досрочное прекращение акции при выдаче всех акционных товаров.Подробная информация об организаторе Акции, о правилах и порядке ее проведения, количестве призов, сроках, месте и порядке их получения на сайте <a href="https://krs.planeta-mall.ru" target="_blank">krs.planeta-mall.ru</a></p>
           `
         ],
+        info: {
+          rules: 'https://krs.planeta-mall.ru/documents/102789/view',
+          qa: 'https://krs.planeta-mall.ru/documents/102790/view',
+          policy: 'https://id.mall.tech/policy'
+        },
         social: {
           vk: 'https://vk.com/public50952130',
           tg: 'https://t.me/tc_planeta',
